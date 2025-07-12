@@ -124,5 +124,30 @@ main p.highlight {
 body:not(.homepage) main h1 {
   text-align: center;
 }
+/* === Global box-sizing to avoid horizontal overflow === */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* === Homepage: constrain header, splash & footer to same column === */
+body.homepage header,
+body.homepage main.splash,
+body.homepage footer {
+  width: 100%;
+  max-width: 600px;   /* match your sub-page columns */
+  margin: 0 auto;     /* center that column */
+}
+
+/* Ensure splash fills the column on mobile */
+@media (max-width: 600px) {
+  body.homepage main.splash {
+    width: 100%;
+  }
+}
+
+/* Optional: hide any stray horizontal scrollbar */
+body {
+  overflow-x: hidden;
+}
 
 

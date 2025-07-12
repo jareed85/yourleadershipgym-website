@@ -149,5 +149,20 @@ body.homepage footer {
 body {
   overflow-x: hidden;
 }
+/* === Homepage container centering & padding fix === */
+
+/* Remove horizontal padding from the body on the homepage */
+body.homepage {
+  padding: 2rem 0;  /* keep top/bottom, drop left/right */
+}
+
+/* Center header, splash and footer in a 90%/600px column */
+body.homepage header,
+body.homepage main.splash,
+body.homepage footer {
+  width: 90%;           /* or tweak to 80% if you’d prefer */
+  max-width: 600px;     /* match your sub‐page columns */
+  margin: 0 auto;       /* center it */
+}
 
 

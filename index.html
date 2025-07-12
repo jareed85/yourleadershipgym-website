@@ -5,16 +5,11 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M1FCWDQXVH"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){ dataLayer.push(arguments); }
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
-  gtag('config', 'G-M1FCWDQXVH', {
-    linker: {
-      domains: ['leadershipgymhq.com','yourleadershipgym.com'] 
-      //                                ^ add the missing “r” here
-    }
-  });
+  gtag('config', 'G-M1FCWDQXVH');
 </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Leadership Gym | Daily Practice for Real Leaders</title>
@@ -79,28 +74,7 @@
   </nav>
   <p>&copy; 2025 Leadership Gym</p>
 </footer>
-    <!-- Cross-domain linker decorator -->
-  <!-- Cross-domain linker decorator (replace your old version with this) -->
-  <script>
-    window.addEventListener('load', () => {
-      if (typeof gtag !== 'function') {
-        console.error('gtag() is not defined yet');
-        return;
-      }
 
-      gtag('get', 'G-M1FCWDQXVH', 'linker_param', (linkerParam) => {
-        console.log('GA4 linkerParam:', linkerParam);
-        const link = document.querySelector('a.button[href="https://leadershipgymhq.com"]');
-        if (!link) {
-          console.error('Glide link not found!');
-          return;
-        }
-        const sep = link.href.includes('?') ? '&' : '?';
-        link.href = link.href + sep + linkerParam;
-        console.log('Decorated link:', link.href);
-      });
-    });
-  </script>
 </body>
 </html>
 

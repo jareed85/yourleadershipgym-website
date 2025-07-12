@@ -112,7 +112,7 @@ body.homepage main.splash a.button {
 body:not(.homepage) main {
   max-width: 600px;
   width: 80%;
-  margin: 2rem auto;
+  margin: 1rem auto 2rem;  /* 1rem top, auto sides, 2rem bottom */
   text-align: left;         /* left-align sub-page copy */
 }
 

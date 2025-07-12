@@ -105,5 +105,9 @@ body:not(.homepage) main {
   width: 90%;          /* so it’s not too snug on small screens */
   margin: 2rem auto;   /* vertical gap + horizontal centering */
 }
+/* Center the “highlight” paragraphs */
+main p.highlight {
+  text-align: center;
+}
 
 

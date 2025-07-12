@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Existing homepage entry -->
   <url>
     <loc>https://yourleadershipgym.com/</loc>
     <lastmod>2025-07-11</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  
+  <!-- About page -->
+  <url>
+    <loc>https://yourleadershipgym.com/about.html</loc>
+    <lastmod>2025-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Our Story page -->
+  <url>
+    <loc>https://yourleadershipgym.com/how-it-started.html</loc>
+    <lastmod>2025-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- FAQ page -->
+  <url>
+    <loc>https://yourleadershipgym.com/faq.html</loc>
+    <lastmod>2025-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

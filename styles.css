@@ -67,21 +67,24 @@ footer {
   font-size: 0.9rem;
   color: #cccccc;
 }
-/* === Homepage full-screen centering === */
-body.homepage {
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-}
 
-body.homepage main.splash {
-  flex: 1; /* push footer down */
+/* === Homepage overrides (stack layout, no flex centering) === */
+body.homepage {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* stack items from the top */
+  text-align: center;
+  padding: 2rem 1rem;           /* top/bottom, left/right */
 }
+
+body.homepage main.splash {
+  /* no more flex; just a centered block */
+  display: block;
+  margin: 1rem auto;            /* tighten the gap under header */
+  max-width: 800px;             /* optional: keep same width as other pages */
+}
+
 
 /* Center H1 titles inside main, but keep paragraphs left-aligned */
 main h1 {

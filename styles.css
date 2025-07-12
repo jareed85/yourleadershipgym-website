@@ -88,14 +88,14 @@ body.homepage {
   padding: 2rem 1rem;
 }
 
+/* Homepage splash: narrow, centered container */
 body.homepage main.splash {
-  /* tighter stack under header, keep centered block */
   display: block;
-  margin: 1rem auto;
-  max-width: 800px;
-  text-align: center;       /* keep splash text centered */
+  width: 80%;         /* match sub-page horizontal padding */
+  max-width: 600px;   /* keeps it from getting too wide */
+  margin: 1rem auto;  /* vertical gap + horizontal centering */
+  text-align: center; /* keep the text centered */
 }
-
 /* Center only the splash page title */
 body.homepage main.splash h1 {
   margin-top: 0;

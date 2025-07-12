@@ -9,12 +9,12 @@ body {
   min-height: 100vh;
 }
 
+/* === Header & Logo === */
 header {
   text-align: center;
   padding: 1rem 0;
 }
 
-/* === Logo === */
 img.logo {
   width: 120px;
   max-width: 100%;
@@ -33,17 +33,17 @@ nav a.active {
   border-bottom: 2px solid #4EC3E0;
 }
 
-/* === Main Content === */
+/* === Main Content (centered by default) === */
 main {
   flex: 1;                   /* push footer down */
   width: 100%;
-  max-width: 800px;  
+  max-width: 800px;
   margin: 2rem auto;
-  text-align: left;
+  text-align: center;        /* center on homepage */
   padding: 0 1rem;
 }
 
-/* === Buttons === */
+/* === Buttons (global style) === */
 a.button {
   display: inline-block;
   margin: 2rem auto;
@@ -68,74 +68,43 @@ footer {
   color: #cccccc;
 }
 
-/* === Homepage overrides (stack layout, no flex centering) === */
+/* === Homepage Overrides === */
 body.homepage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* stack items from the top */
-  text-align: center;
-  padding: 2rem 1rem;           /* top/bottom, left/right */
-}
-
-body.homepage main.splash {
-  /* no more flex; just a centered block */
-  display: block;
-  margin: 1rem auto;            /* tighten the gap under header */
-  max-width: 800px;             /* optional: keep same width as other pages */
-}
-
-
-/* Center H1 titles inside main, but keep paragraphs left-aligned */
-main h1 {
-  text-align: center;
-  margin-top: 0;    /* optional: tighten the gap above */
-  margin-bottom: 1rem;
-}
-/* === Homepage overrides (stack layout, no global text-centering) === */
-body.homepage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;      /* center header/nav & column */
+  /* stack layout, no global text-centering */
   justify-content: flex-start;
+  align-items: center;      
   padding: 2rem 1rem;
-  /* remove text-align:center here */
 }
 
-/* Center the header/nav */
-body.homepage header {
-  text-align: center;
-}
-
-/* Splash container: narrower, centered, left‐justified content */
 body.homepage main.splash {
+  /* tighter stack under header, keep centered block */
   display: block;
-  margin: 1rem auto;        /* vertical gap + horiz-center */
-  max-width: 600px;          /* narrower read-width */
-  text-align: left;          /* keep paragraphs left-aligned */
+  margin: 1rem auto;
+  max-width: 800px;
+  text-align: center;       /* keep splash text centered */
 }
 
-/* Center only the main title */
+/* Center only the splash page title */
 body.homepage main.splash h1 {
-  text-align: center;
+  margin-top: 0;
 }
 
-/* Restore smaller, centered button on homepage */
+/* Center only the splash button (compact size) */
 body.homepage main.splash a.button {
-  display: inline-block;   /* shrink to content width */
-  margin: 2rem auto;       /* center horizontally */
-  padding: 0.75rem 1.5rem; /* keep your existing padding */
-  width: auto;             /* ensure it doesn’t fill the container */
+  /* inline-block + auto margins will center it */
+  width: auto;
 }
 
-
-/* Narrow the reading column on all non-homepage pages */
+/* === Sub-page Overrides === */
+/* Narrow column + left-justify on all pages except homepage */
 body:not(.homepage) main {
-  max-width: 600px;    /* or 550px, tweak to taste */
-  width: 90%;          /* so it’s not too snug on small screens */
-  margin: 2rem auto;   /* vertical gap + horizontal centering */
+  max-width: 600px;
+  width: 80%;
+  margin: 2rem auto;
+  text-align: left;         /* left-align sub-page copy */
 }
-/* Center the “highlight” paragraphs */
+
+/* Center any <p class="highlight"> on sub-pages if you use it */
 main p.highlight {
   text-align: center;
 }

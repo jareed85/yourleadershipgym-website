@@ -92,16 +92,40 @@ main h1 {
   margin-top: 0;    /* optional: tighten the gap above */
   margin-bottom: 1rem;
 }
-/* === Homepage spacing tweaks === */
-body.homepage header {
-  /* Reduce space under the logo/nav */
-  padding-bottom: 0.5rem;
+/* === Homepage overrides (stack layout, no global text-centering) === */
+body.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* center header/nav & column */
+  justify-content: flex-start;
+  padding: 2rem 1rem;
+  /* remove text-align:center here */
 }
 
-body.homepage main.splash {
-  /* Pull the splash content up closer to the header */
-  margin-top: 0.5rem;
+/* Center the header/nav */
+body.homepage header {
+  text-align: center;
 }
+
+/* Splash container: narrower, centered, left‐justified content */
+body.homepage main.splash {
+  display: block;
+  margin: 1rem auto;        /* vertical gap + horiz-center */
+  max-width: 600px;          /* narrower read-width */
+  text-align: left;          /* keep paragraphs left-aligned */
+}
+
+/* Center only the main title */
+body.homepage main.splash h1 {
+  text-align: center;
+}
+
+/* Center only the button */
+body.homepage main.splash a.button {
+  display: block;            /* make margin auto work */
+  margin: 2rem auto;         /* center horizontally */
+}
+
 /* Narrow the reading column on all non-homepage pages */
 body:not(.homepage) main {
   max-width: 600px;    /* or 550px, tweak to taste */

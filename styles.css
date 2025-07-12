@@ -1,4 +1,4 @@
-/* remove the centering on the body for content flow */
+/* === Global Layout === */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -9,23 +9,57 @@ body {
   min-height: 100vh;
 }
 
-/* header stays centered */
 header {
   text-align: center;
   padding: 1rem 0;
 }
 
-/* main should be a left-aligned column */
-main {
-  flex: 1;                   /* push footer to bottom if page is short */
-  width: 100%;
-  max-width: 800px;          /* keeps your text from growing too wide */
-  margin: 2rem auto;         /* vertical space + horizontal center */
-  text-align: left;          /* left-align the paragraphs and lists */
-  padding: 0 1rem;           /* a little breathing room on mobile */
+/* === Logo === */
+img.logo {
+  width: 120px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
 }
 
-/* footer stays centered */
+/* === Navigation === */
+nav a {
+  margin: 0 0.75rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a.active {
+  border-bottom: 2px solid #4EC3E0;
+}
+
+/* === Main Content === */
+main {
+  flex: 1;                   /* push footer down */
+  width: 100%;
+  max-width: 800px;  
+  margin: 2rem auto;
+  text-align: left;
+  padding: 0 1rem;
+}
+
+/* === Buttons === */
+a.button {
+  display: inline-block;
+  margin: 2rem auto;
+  padding: 0.75rem 1.5rem;
+  background: #4EC3E0;
+  color: #1F2D2D;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+a.button:hover {
+  background: #3bb5d3;
+}
+
+/* === Footer === */
 footer {
   text-align: center;
   margin-top: auto;
@@ -33,4 +67,5 @@ footer {
   font-size: 0.9rem;
   color: #cccccc;
 }
+
 

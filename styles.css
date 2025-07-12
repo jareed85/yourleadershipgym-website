@@ -83,3 +83,11 @@ body.homepage main.splash {
   justify-content: center;
 }
 
+/* Center H1 titles inside main, but keep paragraphs left-aligned */
+main h1 {
+  text-align: center;
+  margin-top: 0;    /* optional: tighten the gap above */
+  margin-bottom: 1rem;
+}
+
+

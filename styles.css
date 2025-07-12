@@ -1,44 +1,36 @@
-/* Base page layout */
+/* remove the centering on the body for content flow */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #386A83; /* slate blue */
+  background: #386A83;
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   min-height: 100vh;
-  padding: 2rem;
+}
+
+/* header stays centered */
+header {
   text-align: center;
+  padding: 1rem 0;
 }
-img.logo { width: 120px; margin-bottom: 1.5rem; }
-header { display: flex; flex-direction: column; align-items: center; padding: 1rem 0; }
-nav a {
-  margin: 0 0.75rem;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
+
+/* main should be a left-aligned column */
+main {
+  flex: 1;                   /* push footer to bottom if page is short */
+  width: 100%;
+  max-width: 800px;          /* keeps your text from growing too wide */
+  margin: 2rem auto;         /* vertical space + horizontal center */
+  text-align: left;          /* left-align the paragraphs and lists */
+  padding: 0 1rem;           /* a little breathing room on mobile */
 }
-nav a.active { border-bottom: 2px solid #4EC3E0; }
-main { max-width: 800px; width: 100%; padding: 1rem; }
-h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-h2 { font-size: 1.5rem; margin-top: 1.5rem; }
-p { font-size: 1.1rem; line-height: 1.6; }
-a.button {
-  display: inline-block;
-  margin: 2rem auto;
-  padding: 0.75rem 1.5rem;
-  background: #4EC3E0;
-  color: #1F2D2D;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: background 0.3s ease;
-}
-a.button:hover { background: #3bb5d3; }
+
+/* footer stays centered */
 footer {
-  margin-top: 4rem;
+  text-align: center;
+  margin-top: auto;
+  padding: 1rem 0;
   font-size: 0.9rem;
   color: #cccccc;
 }
+

@@ -108,5 +108,9 @@ body:not(.homepage) main {
 main p.highlight {
   text-align: center;
 }
+/* Center the H1 on sub-pages */
+body:not(.homepage) main h1 {
+  text-align: center;
+}
 
 

@@ -80,19 +80,30 @@
   <p>&copy; 2025 Leadership Gym</p>
 </footer>
     <!-- Cross-domain linker decorator -->
+  <!-- Cross-domain linker decorator (replace your old version with this) -->
   <script>
-    // Grab the GA4 linker param and append it to any Glide links
-    gtag('get', 'G-M1FCWDQXVH', 'linker_param', (linkerParam) => {
-      document
-        .querySelectorAll('a[href^="https://leadershipgymhq.com"]')
-        .forEach(a => {
-          const sep = a.href.includes('?') ? '&' : '?';
-          a.href = a.href + sep + linkerParam;
-        });
+    window.addEventListener('load', () => {
+      if (typeof gtag !== 'function') {
+        console.error('gtag() is not defined yet');
+        return;
+      }
+
+      gtag('get', 'G-M1FCWDQXVH', 'linker_param', (linkerParam) => {
+        console.log('GA4 linkerParam:', linkerParam);
+        const link = document.querySelector('a.button[href="https://leadershipgymhq.com"]');
+        if (!link) {
+          console.error('Glide link not found!');
+          return;
+        }
+        const sep = link.href.includes('?') ? '&' : '?';
+        link.href = link.href + sep + linkerParam;
+        console.log('Decorated link:', link.href);
+      });
     });
   </script>
 </body>
 </html>
+
 
 
 

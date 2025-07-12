@@ -120,11 +120,14 @@ body.homepage main.splash h1 {
   text-align: center;
 }
 
-/* Center only the button */
+/* Restore smaller, centered button on homepage */
 body.homepage main.splash a.button {
-  display: block;            /* make margin auto work */
-  margin: 2rem auto;         /* center horizontally */
+  display: inline-block;   /* shrink to content width */
+  margin: 2rem auto;       /* center horizontally */
+  padding: 0.75rem 1.5rem; /* keep your existing padding */
+  width: auto;             /* ensure it doesn’t fill the container */
 }
+
 
 /* Narrow the reading column on all non-homepage pages */
 body:not(.homepage) main {

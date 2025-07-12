@@ -79,6 +79,18 @@
   </nav>
   <p>&copy; 2025 Leadership Gym</p>
 </footer>
+    <!-- Cross-domain linker decorator -->
+  <script>
+    // Grab the GA4 linker param and append it to any Glide links
+    gtag('get', 'G-M1FCWDQXVH', 'linker_param', (linkerParam) => {
+      document
+        .querySelectorAll('a[href^="https://leadershipgymhq.com"]')
+        .forEach(a => {
+          const sep = a.href.includes('?') ? '&' : '?';
+          a.href = a.href + sep + linkerParam;
+        });
+    });
+  </script>
 </body>
 </html>
 

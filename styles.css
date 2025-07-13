@@ -164,5 +164,13 @@ body.homepage footer {
   max-width: 600px;     /* match your sub‐page columns */
   margin: 0 auto;       /* center it */
 }
+/* Constrain header & footer to match main on all non-homepage pages */
+body:not(.homepage) header,
+body:not(.homepage) footer {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 
 

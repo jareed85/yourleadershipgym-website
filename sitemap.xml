@@ -11,7 +11,7 @@
 
   <!-- About page -->
   <url>
-    <loc>https://yourleadershipgym.com/about.html</loc>
+    <loc>https://yourleadershipgym.com/about</loc>
     <lastmod>2025-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -19,7 +19,7 @@
 
   <!-- Our Story page -->
   <url>
-    <loc>https://yourleadershipgym.com/how-it-started.html</loc>
+    <loc>https://yourleadershipgym.com/how-it-started</loc>
     <lastmod>2025-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -27,7 +27,7 @@
 
   <!-- FAQ page -->
   <url>
-    <loc>https://yourleadershipgym.com/faq.html</loc>
+    <loc>https://yourleadershipgym.com/faq</loc>
     <lastmod>2025-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -35,7 +35,7 @@
 
   <!-- Privacy Policy -->
   <url>
-    <loc>https://yourleadershipgym.com/privacy.html</loc>
+    <loc>https://yourleadershipgym.com/privacy</loc>
     <lastmod>2025-07-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
@@ -43,7 +43,7 @@
 
   <!-- Terms of Service -->
   <url>
-    <loc>https://yourleadershipgym.com/terms.html</loc>
+    <loc>https://yourleadershipgym.com/terms</loc>
     <lastmod>2025-07-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>

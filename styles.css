@@ -2,7 +2,10 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
-
+/* Alwaysreserve scrollbar space to stop horizontal shifts */
+html{
+  overflow-y: scroll;
+}
 body {
   margin: 0;
   padding: 2rem 0;           /* added vertical padding on all pages */

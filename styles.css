@@ -1,4 +1,7 @@
-/* === Global Layout === */
+/* === Global Box-Sizing & Overflow Fix === */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -7,14 +10,17 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
-/* === Header & Logo === */
+/* === Header & Logo (all pages) === */
 header {
   text-align: center;
   padding: 1rem 0;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
 }
-
 img.logo {
   width: 120px;
   max-width: 100%;
@@ -35,15 +41,37 @@ nav a.active {
 
 /* === Main Content (centered by default) === */
 main {
-  flex: 1;                   /* push footer down */
+  flex: 1;
   width: 100%;
   max-width: 800px;
   margin: 2rem auto;
-  text-align: center;        /* center on homepage */
+  text-align: center;
   padding: 0 1rem;
 }
 
-/* === Buttons (global style) === */
+/* Homepage splash container */
+body.homepage main.splash {
+  width: 80%;
+  max-width: 600px;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+/* Sub-page container, left-justified copy */
+body:not(.homepage) main {
+  width: 80%;
+  max-width: 600px;
+  margin: 1rem auto 2rem;
+  text-align: left;
+}
+body:not(.homepage) main h1 {
+  text-align: center;
+}
+main p.highlight {
+  text-align: center;
+}
+
+/* === Buttons (global) === */
 a.button {
   display: inline-block;
   margin: 2rem auto;
@@ -59,15 +87,18 @@ a.button:hover {
   background: #3bb5d3;
 }
 
-/* === Footer === */
+/* === Footer (all pages) === */
 footer {
   text-align: center;
   margin-top: auto;
   padding: 1rem 0;
   font-size: 0.9rem;
   color: #cccccc;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
 }
-/* Footer Policy Links */
+/* Footer policy links */
 footer .footer-nav {
   margin-bottom: 0.5rem;
 }
@@ -80,97 +111,10 @@ footer .footer-nav a {
 footer .footer-nav span {
   color: #777777;
 }
-/* === Homepage Overrides === */
+
+/* === Homepage root padding (no horizontal) === */
 body.homepage {
-  /* stack layout, no global text-centering */
   justify-content: flex-start;
-  align-items: center;      
-  padding: 2rem 1rem;
+  align-items: center;
+  padding: 2rem 0;
 }
-
-/* Homepage splash: narrow, centered container */
-body.homepage main.splash {
-  display: block;
-  width: 80%;         /* match sub-page horizontal padding */
-  max-width: 600px;   /* keeps it from getting too wide */
-  margin: 1rem auto;  /* vertical gap + horizontal centering */
-  text-align: center; /* keep the text centered */
-}
-/* Center only the splash page title */
-body.homepage main.splash h1 {
-  margin-top: 0;
-}
-
-/* Center only the splash button (compact size) */
-body.homepage main.splash a.button {
-  /* inline-block + auto margins will center it */
-  width: auto;
-}
-
-/* === Sub-page Overrides === */
-/* Narrow column + left-justify on all pages except homepage */
-body:not(.homepage) main {
-  max-width: 600px;
-  width: 80%;
-  margin: 1rem auto 2rem;  /* 1rem top, auto sides, 2rem bottom */
-  text-align: left;         /* left-align sub-page copy */
-}
-
-/* Center any <p class="highlight"> on sub-pages if you use it */
-main p.highlight {
-  text-align: center;
-}
-/* Center the H1 on sub-pages */
-body:not(.homepage) main h1 {
-  text-align: center;
-}
-/* === Global box-sizing to avoid horizontal overflow === */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-/* === Homepage: constrain header, splash & footer to same column === */
-body.homepage header,
-body.homepage main.splash,
-body.homepage footer {
-  width: 100%;
-  max-width: 600px;   /* match your sub-page columns */
-  margin: 0 auto;     /* center that column */
-}
-
-/* Ensure splash fills the column on mobile */
-@media (max-width: 600px) {
-  body.homepage main.splash {
-    width: 100%;
-  }
-}
-
-/* Optional: hide any stray horizontal scrollbar */
-body {
-  overflow-x: hidden;
-}
-/* === Homepage container centering & padding fix === */
-
-/* Remove horizontal padding from the body on the homepage */
-body.homepage {
-  padding: 2rem 0;  /* keep top/bottom, drop left/right */
-}
-
-/* Center header, splash and footer in a 90%/600px column */
-body.homepage header,
-body.homepage main.splash,
-body.homepage footer {
-  width: 90%;           /* or tweak to 80% if you’d prefer */
-  max-width: 600px;     /* match your sub‐page columns */
-  margin: 0 auto;       /* center it */
-}
-/* Constrain header & footer to match main on all non-homepage pages */
-body:not(.homepage) header,
-body:not(.homepage) footer {
-  width: 80%;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-
-

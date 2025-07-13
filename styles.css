@@ -2,8 +2,10 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
+  padding: 2rem 0;           /* added vertical padding on all pages */
   font-family: Arial, sans-serif;
   background: #386A83;
   color: #ffffff;
@@ -21,6 +23,7 @@ header {
   max-width: 600px;
   margin: 0 auto;
 }
+
 img.logo {
   width: 120px;
   max-width: 100%;
@@ -116,5 +119,5 @@ footer .footer-nav span {
 body.homepage {
   justify-content: flex-start;
   align-items: center;
-  padding: 2rem 0;
+  /* padding removed—now inherited from body */
 }

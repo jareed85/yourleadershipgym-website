@@ -15,17 +15,22 @@
       text-align: center;
       margin: 1.5rem 0;
     }
-    .download-cta .button {
+    .download-cta .button,
+    .download-cta button {
       display: inline-block;
       padding: 0.75rem 1.5rem;
       background: #4EC3E0;
       color: #1F2D2D;
       text-decoration: none;
       font-weight: bold;
+      border: none;
       border-radius: 8px;
+      cursor: pointer;
       transition: background 0.3s ease;
+      margin: 0 0.5rem;
     }
-    .download-cta .button:hover {
+    .download-cta .button:hover,
+    .download-cta button:hover {
       background: #3bb5d3;
     }
     main {
@@ -133,7 +138,8 @@
     </ul>
   </main>
   <div class="download-cta">
-    <a href="/checklist/checklist.pdf" download class="button">📄 Download Printable PDF</a>
+    <a href="/checklist/checklist.pdf" download class="button">📄 Download PDF</a>
+    <button onclick="window.print()" class="button">🖨️ Print</button>
   </div>
   <footer>
     <a href="https://yourleadershipgym.com">Back to Leadership Gym</a>

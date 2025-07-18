@@ -11,13 +11,18 @@
     header {
       margin-bottom: 1rem;
     }
+    /* ===== Checklist Download CTA ===== */
     .download-cta {
-      text-align: center;
+      display: inline-flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
       margin: 1.5rem 0;
     }
     .download-cta .button,
     .download-cta button {
-      display: inline-block;
+      flex: 1 1 auto;
+      max-width: 200px;
       padding: 0.75rem 1.5rem;
       background: #4EC3E0;
       color: #1F2D2D;
@@ -27,7 +32,6 @@
       border-radius: 8px;
       cursor: pointer;
       transition: background 0.3s ease;
-      margin: 0 0.5rem;
     }
     .download-cta .button:hover,
     .download-cta button:hover {

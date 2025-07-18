@@ -11,6 +11,23 @@
     header {
       margin-bottom: 1rem;
     }
+    .download-cta {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .download-cta .button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: #4EC3E0;
+      color: #1F2D2D;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+    .download-cta .button:hover {
+      background: #3bb5d3;
+    }
     main {
       padding: 1rem 1rem 2rem;
     }
@@ -52,12 +69,29 @@
     footer nav.footer-nav {
       margin-top: 1rem;
     }
+    @media print {
+      header,
+      .download-cta,
+      footer {
+        display: none !important;
+      }
+      body {
+        background: none !important;
+        color: #000 !important;
+      }
+      main {
+        padding: 0 !important;
+      }
+    }
   </style>
 </head>
 <body class="checklist-page">
   <header>
     <img class="logo" src="https://raw.githubusercontent.com/jareed85/yourleadershipgym-website/main/LG_logo_fullcolor_export.png" alt="Leadership Gym Logo">
   </header>
+  <div class="download-cta">
+    <a href="/checklist/checklist.pdf" download class="button">📄 Download Printable PDF</a>
+  </div>
   <main>
     <h1>5-Minute Daily Leadership Habit Checklist</h1>
     <ul>

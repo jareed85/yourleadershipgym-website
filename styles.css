@@ -159,3 +159,29 @@ body.homepage {
     padding: 0 !important;
   }
 }
+/* ===== Checklist Page Overrides ===== */
+body.checklist-page main {
+  /* make sure the content area is left-aligned */
+  text-align: left;
+  /* reset any unexpected padding */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+body.checklist-page main h1,
+body.checklist-page main ul {
+  /* zero out any margins so title & list items share the same left edge */
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+body.checklist-page main label {
+  /* ensure your label block doesn’t get nudged */
+  margin-left: 0 !important;
+}
+
+body.checklist-page input[type="checkbox"] {
+  /* align the box inline with the label text */
+  vertical-align: middle;
+  margin-left: 0 !important;
+}

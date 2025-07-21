@@ -3,7 +3,19 @@
   "short_name": "LeadershipGym",
   "start_url": "/",
   "display": "standalone",
+  "background_color": "#386A83",
+  "theme_color": "#386A83",
   "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/LG_logo_32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
     {
       "src": "/LG_logo_fullcolor_export.png",
       "sizes": "192x192",

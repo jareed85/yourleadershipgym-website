@@ -176,7 +176,7 @@ body.checklist-page main ul {
 }
 
 body.checklist-page main label {
-  /* ensure your label block doesn’t get nudged */
+  /* ensure your label block doesn't get nudged */
   margin-left: 0 !important;
 }
 
@@ -184,4 +184,18 @@ body.checklist-page input[type="checkbox"] {
   /* align the box inline with the label text */
   vertical-align: middle;
   margin-left: 0 !important;
+}
+
+/* === Social Proof & Micro Copy === */
+.social-proof {
+  font-size: 1.1rem;
+  color: #fbbf24;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.micro {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  margin-top: 1rem;
+  opacity: 0.9;
 }

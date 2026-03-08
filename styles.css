@@ -59,9 +59,15 @@ main {
 /* Homepage splash container */
 body.homepage main.splash {
   width: 80%;
-  max-width: 600px;
-  margin: 1rem auto;
+  max-width: 700px;
+  margin: 2rem auto;
   text-align: center;
+  padding: 3rem 0;
+}
+
+body.homepage main.splash p {
+  line-height: 1.8;
+  font-size: 1.1rem;
 }
 
 /* Sub-page container, left-justified copy */
@@ -200,6 +206,16 @@ body.checklist-page input[type="checkbox"] {
   opacity: 0.9;
 }
 
+/* === Section Dividers === */
+body.homepage main.splash,
+.testimonials,
+.features {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+body.homepage main.splash {
+  border-bottom: none;
+}
+
 /* === Pricing Page === */
 .pricing-grid {
   display: flex;
@@ -309,22 +325,31 @@ body.checklist-page input[type="checkbox"] {
   color: #4EC3E0;
 }
 
-/* === Testimonials === */
-.testimonials {
+/* === All Content Sections === */
+main.splash,
+.testimonials,
+.features {
   width: 80%;
   max-width: 900px;
-  margin: 3rem auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === Testimonials === */
+.testimonials {
+  padding: 3rem 0;
   text-align: center;
 }
 
 .testimonials h2 {
-  margin-bottom: 2rem;
-  font-size: 1.8rem;
+  margin-bottom: 2.5rem;
+  font-size: 2rem;
+  color: #fff;
 }
 
 .testimonial-grid {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -333,87 +358,80 @@ body.checklist-page input[type="checkbox"] {
   background: #fff;
   color: #333;
   border-radius: 16px;
-  padding: 1.5rem;
-  width: 280px;
+  padding: 2rem;
+  width: 260px;
   text-align: left;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
   position: relative;
-}
-
-.testimonial::before {
-  content: '"';
-  position: absolute;
-  top: -10px;
-  left: 15px;
-  font-size: 4rem;
-  color: #4EC3E0;
-  font-family: Georgia, serif;
-  line-height: 1;
 }
 
 .testimonial-stars {
   color: #fbbf24;
-  font-size: 1.1rem;
-  margin-bottom: 0.75rem;
-  letter-spacing: 2px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 3px;
 }
 
 .testimonial p {
   font-size: 0.95rem;
-  line-height: 1.5;
-  margin-bottom: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
   color: #4a5568;
 }
 
 .testimonial .author {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #1a202c;
 }
 
 .testimonial .author-title {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   color: #718096;
   font-weight: 400;
 }
 
 /* === Features Section === */
 .features {
-  width: 80%;
-  max-width: 800px;
-  margin: 3rem auto;
+  padding: 3rem 0;
   text-align: center;
 }
 
 .features h2 {
-  margin-bottom: 2rem;
-  font-size: 1.8rem;
+  margin-bottom: 2.5rem;
+  font-size: 2rem;
+  color: #fff;
 }
 
 .feature-grid {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .feature {
-  width: 220px;
+  width: 240px;
   text-align: center;
+  background: rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
 }
 
 .feature-icon {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 .feature h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #fff;
 }
 
 .feature p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   opacity: 0.85;
-  line-height: 1.4;
+  line-height: 1.5;
+  color: #e2e8f0;
 }

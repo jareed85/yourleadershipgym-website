@@ -928,3 +928,31 @@ p { color: var(--text-300); }
 body:not(.homepage) header {
   /* placeholder — other pages use their own layout */
 }
+
+/* ---------- FAQ Section ---------- */
+.faq-section { padding: 80px 0; }
+
+.faq-list {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 0;
+}
+.faq-item:last-child { border-bottom: none; }
+
+.faq-item h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem;
+}
+
+.faq-item p {
+  font-size: 0.925rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin: 0;
+}

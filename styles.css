@@ -930,11 +930,33 @@ body:not(.homepage) header {
 }
 
 /* ---------- FAQ Section ---------- */
-.faq-section { padding: 80px 0; }
+.faq-section {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.faq-section .section-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--indigo-400);
+  margin-bottom: 16px;
+}
+
+.faq-section .section-title {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0 0 3rem;
+  line-height: 1.2;
+}
 
 .faq-list {
-  max-width: 680px;
+  max-width: 640px;
   margin: 0 auto;
+  text-align: left;
 }
 
 .faq-item {
@@ -954,19 +976,20 @@ body:not(.homepage) header {
   padding: 1.25rem 0;
   cursor: pointer;
   text-align: left;
-  font-size: 0.975rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--text-primary);
   font-family: inherit;
-  transition: color var(--transition);
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease;
 }
 .faq-q:hover { color: var(--indigo-400); }
 
 .faq-chevron {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1;
   color: var(--text-500);
-  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, color 0.2s ease;
   flex-shrink: 0;
 }
 .faq-q[aria-expanded="true"] .faq-chevron {
@@ -979,11 +1002,11 @@ body:not(.homepage) header {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  font-size: 0.9rem;
+  font-size: 0.925rem;
   color: var(--text-secondary);
-  line-height: 1.75;
-  padding: 0 0.25rem;
-  transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+  line-height: 1.8;
+  padding: 0;
+  transition: max-height 0.3s ease, opacity 0.25s ease;
 }
 .faq-q[aria-expanded="true"] + .faq-a {
   padding-bottom: 1.25rem;

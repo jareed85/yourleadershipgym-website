@@ -1,136 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-M1FCWDQXVH"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-M1FCWDQXVH');
   </script>
 
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FAQ | Leadership Gym</title>
-  <meta name="description" content="Answers to common questions about Leadership Gym—your daily leadership workout." />
-
-  <!-- Canonical URL -->
+  <meta name="description" content="Answers to common questions about Leadership Gym — your daily leadership workout." />
   <link rel="canonical" href="https://yourleadershipgym.com/faq" />
 
-  <!-- Favicon: legacy ICO first for browsers & Search -->
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-
-  <!-- PNG icons for modern browsers & PWA -->
   <link rel="icon" href="/LG_logo_32.png" sizes="32x32" type="image/png" />
   <link rel="icon" href="/LG_logo_192.png" sizes="192x192" type="image/png" />
   <link rel="apple-touch-icon" href="/LG_logo_192.png" />
-
-  <!-- Web App Manifest -->
   <link rel="manifest" href="/site.webmanifest" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:title"       content="FAQ | Leadership Gym" />
-  <meta property="og:description" content="Answers to common questions about Leadership Gym—your daily leadership workout." />
-  <meta property="og:image"       content="https://yourleadershipgym.com/LG_logo_192.png" />
-  <meta property="og:url"         content="https://yourleadershipgym.com/faq" />
-  <meta property="og:type"        content="website" />
-  <meta property="fb:app_id"      content="1269305957929557" />
+  <meta property="og:title" content="FAQ | Leadership Gym" />
+  <meta property="og:description" content="Answers to common questions about Leadership Gym." />
+  <meta property="og:image" content="https://yourleadershipgym.com/LG_logo_192.png" />
+  <meta property="og:url" content="https://yourleadershipgym.com/faq" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FAQ | Leadership Gym" />
+  <meta name="twitter:description" content="Answers to common questions about Leadership Gym." />
+  <meta name="twitter:image" content="https://yourleadershipgym.com/LG_logo_192.png" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="FAQ | Leadership Gym" />
-  <meta name="twitter:description" content="Answers to common questions about Leadership Gym—your daily leadership workout." />
-  <meta name="twitter:image"       content="https://yourleadershipgym.com/LG_logo_192.png" />
-
-  <!-- Organization JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Leadership Gym",
     "url": "https://yourleadershipgym.com",
-    "logo": "https://yourleadershipgym.com/LG_logo_192.png",
-    "sameAs": [
-      "https://www.instagram.com/leadership_gym",
-      "https://www.linkedin.com/company/leadershipgymhq"
-    ]
+    "logo": "https://yourleadershipgym.com/LG_logo_192.png"
   }
   </script>
 
-  <!-- Global Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* ── Subpage overrides ── */
+    .subpage-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 6rem 1.5rem 4rem;
+    }
+    .subpage-wrap h1 {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 2.5rem;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 0;
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0 0 0.6rem;
+    }
+    .faq-item p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin: 0;
+    }
+    .faq-item a {
+      color: var(--indigo-400);
+      text-decoration: none;
+    }
+    .faq-item a:hover { text-decoration: underline; }
+  </style>
 </head>
 
 <body>
-  <header>
-    <img
-      class="logo"
-      src="https://yourleadershipgym.com/LG_logo_fullcolor_export.png"
-      alt="Leadership Gym Logo"
-    />
-    <nav>
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/how-it-started">Our Story</a>
-      <a href="/faq" class="active">FAQ</a>
-      <a href="/pricing">Pricing</a>
-    </nav>
-  </header>
+  <!-- ── Nav (matches index.html) ── -->
+  <nav class="site-nav" id="site-nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="Leadership Gym home">
+        <img src="https://yourleadershipgym.com/LG_logo_fullcolor_export.png" alt="Leadership Gym" height="40" />
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/#how-it-works">How It Works</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/faq" class="active">FAQ</a></li>
+      </ul>
+      <a href="https://leadershipgymhq.com" target="_blank" rel="noopener" class="btn btn-primary nav-cta">Get Started Free</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-  <main>
+  <!-- ── Content ── -->
+  <div class="subpage-wrap">
     <h1>Frequently Asked Questions</h1>
 
     <section class="faq-item">
       <h2>What is Leadership Gym?</h2>
-      <p>Leadership Gym is your space to build stronger leadership habits—one daily rep at a time. You get a daily AI-powered prompt, instant scoring across Clarity, Strategy, Empathy, and Self-Awareness, plus progress charts and weekly recaps.</p>
+      <p>Leadership Gym is your space to build stronger leadership habits — one daily rep at a time. You get a real workplace scenario every day, write how you'd handle it, and receive instant AI scores across Clarity, Strategy, Empathy, and Self-Awareness.</p>
     </section>
 
     <section class="faq-item">
-      <h2>Who is Leadership Gym for?</h2>
-      <p>Managers, founders, team leads, and anyone who wants to improve their leadership skills through daily reflection and AI feedback.</p>
+      <h2>Who is it for?</h2>
+      <p>Managers, founders, team leads, and anyone who wants to sharpen their leadership instincts through daily practice and honest feedback.</p>
     </section>
 
     <section class="faq-item">
-      <h2>How does the free trial work?</h2>
-      <p>Enjoy a 7-day free trial—no credit card required. You’ll get full access to all features. At the end of 7 days, you’ll be prompted to subscribe to continue.</p>
+      <h2>Is it really free?</h2>
+      <p>Yes — the core experience is free forever. You get unlimited daily scenarios, unlimited submissions, and your scores across all 4 dimensions at no cost. Upgrading to Pro ($2.99/mo) unlocks full AI coaching feedback and a personalised focus area after each session.</p>
     </section>
 
     <section class="faq-item">
-      <h2>How much time does it take daily?</h2>
-      <p>The average session takes about <strong>5 minutes</strong>, making it easy to build into your morning routine.</p>
+      <h2>How much time does it take?</h2>
+      <p>About <strong>5 minutes a day</strong>. Read the scenario, write your response, get your scores. That's it.</p>
     </section>
 
     <section class="faq-item">
-      <h2>How do I view my past reflections and scores?</h2>
-      <p>Open the app and select “History” from the menu to see all your past prompts and scores over time.</p>
+      <h2>How do I see my past reflections?</h2>
+      <p>Open the app and tap the <strong>History</strong> tab to see all your past responses and scores over time.</p>
     </section>
 
     <section class="faq-item">
-      <h2>What if I need to cancel?</h2>
-      <p>Subscriptions are handled through Stripe; you can cancel anytime via your Stripe customer portal. Your access continues until the end of your current billing period.</p>
+      <h2>How do I upgrade to Pro?</h2>
+      <p>Sign in to the app at <a href="https://leadershipgymhq.com" target="_blank" rel="noopener">leadershipgymhq.com</a>, submit today's reflection, and tap <strong>Upgrade Now</strong> in the feedback section. It's $2.99/mo — cancel anytime.</p>
     </section>
 
     <section class="faq-item">
-      <h2>Is my data private and secure?</h2>
-      <p>Yes—your reflections and scores are stored securely and only you can access them. We do not share your personal data with third parties.</p>
+      <h2>How do I cancel?</h2>
+      <p>Subscriptions are handled through Stripe. You can cancel anytime via your Stripe customer portal — your access continues until the end of the current billing period.</p>
     </section>
 
     <section class="faq-item">
-      <h2>How can I get help or support?</h2>
-      <p>Email us at <a href="mailto:support@leadershipgymhq.com">support@leadershipgymhq.com</a> and we’ll get back to you within 24 hours.</p>
+      <h2>Is my data private?</h2>
+      <p>Yes. Your reflections and scores are stored securely and only accessible to you. We never share your personal data with third parties.</p>
     </section>
-  </main>
 
-  <footer>
-    <nav class="footer-nav">
-      <a href="/privacy">Privacy Policy</a>
-      <span>•</span>
-      <a href="/terms">Terms of Service</a>
-    </nav>
-    <p>&copy; 2025 Leadership Gym</p>
+    <section class="faq-item">
+      <h2>How do I get support?</h2>
+      <p>Email us at <a href="mailto:support@leadershipgymhq.com">support@leadershipgymhq.com</a> and we'll get back to you within 24 hours.</p>
+    </section>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <nav class="footer-links">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 Leadership Gym</p>
+    </div>
   </footer>
+
+  <script>
+    // Nav scroll + hamburger (same as index.html)
+    var nav = document.getElementById('site-nav');
+    window.addEventListener('scroll', function() {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+    var hamburger = document.getElementById('nav-hamburger');
+    var navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', function() {
+      var open = navLinks.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', open);
+    });
+  </script>
 </body>
 </html>

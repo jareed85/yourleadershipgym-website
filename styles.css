@@ -939,20 +939,52 @@ body:not(.homepage) header {
 
 .faq-item {
   border-bottom: 1px solid var(--border);
-  padding: 1.5rem 0;
 }
 .faq-item:last-child { border-bottom: none; }
 
-.faq-item h3 {
-  font-size: 1rem;
-  font-weight: 700;
+/* Accordion button */
+.faq-q {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background: none;
+  border: none;
+  padding: 1.25rem 0;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.975rem;
+  font-weight: 600;
   color: var(--text-primary);
-  margin: 0 0 0.5rem;
+  font-family: inherit;
+  transition: color var(--transition);
+}
+.faq-q:hover { color: var(--indigo-400); }
+
+.faq-chevron {
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--text-500);
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+.faq-q[aria-expanded="true"] .faq-chevron {
+  transform: rotate(180deg);
+  color: var(--indigo-400);
 }
 
-.faq-item p {
-  font-size: 0.925rem;
+/* Answer panel */
+.faq-a {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.75;
-  margin: 0;
+  padding: 0 0.25rem;
+  transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+.faq-q[aria-expanded="true"] + .faq-a {
+  padding-bottom: 1.25rem;
 }

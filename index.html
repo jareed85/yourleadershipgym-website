@@ -487,85 +487,90 @@
     <!-- ================================================
        FAQ
        ================================================ -->
-  <hr class="divider">
+  <hr style="border:none;height:1px;background:linear-gradient(90deg,transparent,#27272a,transparent);margin:0;">
 
-  <section class="section faq-section fade-in" id="faq">
-    <div class="container">
-      <div class="section-label">FAQ</div>
-      <h2 class="section-title">Common Questions</h2>
+  <section id="faq" style="padding:80px 0;">
+    <div style="max-width:1120px;margin:0 auto;padding:0 24px;">
 
-      <div class="faq-list">
+      <!-- Header — matches every other section -->
+      <div style="text-align:center;margin-bottom:48px;">
+        <div style="display:inline-block;font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#818cf8;margin-bottom:14px;">FAQ</div>
+        <h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;color:#f4f4f5;margin:0;line-height:1.15;letter-spacing:-0.02em;">Common Questions</h2>
+      </div>
 
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
+      <!-- Accordion list -->
+      <div style="max-width:640px;margin:0 auto;">
+
+        <div class="faq-row">
+          <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
             What is Leadership Gym?
-            <span class="faq-chevron">&#8964;</span>
+            <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
           </button>
-          <div class="faq-a">A daily practice app for leaders. You get a real workplace scenario every day, write how you&#39;d handle it, and receive instant AI scores across Clarity, Strategy, Empathy, and Self-Awareness.</div>
+          <div class="faq-answer">A daily practice app for leaders. You get a real workplace scenario every day, write how you&#39;d handle it, and receive instant AI scores across Clarity, Strategy, Empathy, and Self-Awareness.</div>
         </div>
 
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
+        <div class="faq-row">
+          <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
             Who is it for?
-            <span class="faq-chevron">&#8964;</span>
+            <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
           </button>
-          <div class="faq-a">Managers, founders, team leads, and anyone who wants to sharpen their leadership instincts through daily reflection and honest feedback.</div>
+          <div class="faq-answer">Managers, founders, team leads, and anyone who wants to sharpen their leadership instincts through daily reflection and honest feedback.</div>
         </div>
 
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
+        <div class="faq-row">
+          <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
             Is it really free?
-            <span class="faq-chevron">&#8964;</span>
+            <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
           </button>
-          <div class="faq-a">Yes &#8212; the core experience is free forever. Unlimited daily scenarios, unlimited submissions, scores across all 4 dimensions. Upgrading to Pro ($2.99/mo) unlocks full AI coaching feedback and a personalised focus area after each session.</div>
+          <div class="faq-answer">Yes &#8212; the core experience is free forever. Unlimited daily scenarios, unlimited submissions, scores across all 4 dimensions. Upgrading to Pro ($2.99/mo) unlocks full AI coaching feedback and a personalised focus area after each session.</div>
         </div>
 
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
+        <div class="faq-row">
+          <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
             How much time does it take?
-            <span class="faq-chevron">&#8964;</span>
+            <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
           </button>
-          <div class="faq-a">About <strong>5 minutes a day</strong>. Read the scenario, write your response, get your scores.</div>
+          <div class="faq-answer">About <strong>5 minutes a day</strong>. Read the scenario, write your response, get your scores.</div>
         </div>
 
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
+        <div class="faq-row">
+          <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
             How do I see my past reflections?
-            <span class="faq-chevron">&#8964;</span>
+            <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
           </button>
-          <div class="faq-a">Open the app and tap the <strong>History</strong> tab to see all your past responses and scores over time.</div>
+          <div class="faq-answer">Open the app and tap the <strong>History</strong> tab to see all your past responses and scores over time.</div>
         </div>
 
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
+        <div class="faq-row">
+          <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
             How do I upgrade to Pro?
-            <span class="faq-chevron">&#8964;</span>
+            <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
           </button>
-          <div class="faq-a">Sign in to the app, submit today&#39;s reflection, and tap <strong>Upgrade Now</strong> in the feedback section. $2.99/mo &#8212; cancel anytime.</div>
+          <div class="faq-answer">Sign in to the app, submit today&#39;s reflection, and tap <strong>Upgrade Now</strong> in the feedback section. $2.99/mo &#8212; cancel anytime.</div>
         </div>
 
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
+        <div class="faq-row">
+          <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
             How do I cancel?
-            <span class="faq-chevron">&#8964;</span>
+            <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
           </button>
-          <div class="faq-a">Subscriptions are handled through Stripe. Cancel anytime via your Stripe customer portal &#8212; access continues until the end of the billing period.</div>
+          <div class="faq-answer">Subscriptions are handled through Stripe. Cancel anytime via your Stripe customer portal &#8212; access continues until the end of the billing period.</div>
         </div>
 
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
+        <div class="faq-row">
+          <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
             Is my data private?
-            <span class="faq-chevron">&#8964;</span>
+            <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
           </button>
-          <div class="faq-a">Yes. Your reflections and scores are only accessible to you. We never share your personal data with third parties.</div>
+          <div class="faq-answer">Yes. Your reflections and scores are only accessible to you. We never share your personal data with third parties.</div>
         </div>
 
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
+        <div class="faq-row" style="border-bottom:none;">
+          <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
             How do I get support?
-            <span class="faq-chevron">&#8964;</span>
+            <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
           </button>
-          <div class="faq-a">Email us at <a href="mailto:support@leadershipgymhq.com" style="color:var(--indigo-400);text-decoration:none;">support@leadershipgymhq.com</a> and we&#39;ll get back to you within 24 hours.</div>
+          <div class="faq-answer">Email us at <a href="mailto:support@leadershipgymhq.com" style="color:#818cf8;text-decoration:none;">support@leadershipgymhq.com</a> and we&#39;ll get back to you within 24 hours.</div>
         </div>
 
       </div>
@@ -625,26 +630,22 @@
   </script>
 
   <script>
-    // FAQ accordion
-    document.querySelectorAll('.faq-q').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var item = btn.parentElement;
-        var answer = item.querySelector('.faq-a');
-        var isOpen = btn.getAttribute('aria-expanded') === 'true';
-        // Close all
-        document.querySelectorAll('.faq-q').forEach(function(b) {
-          b.setAttribute('aria-expanded', 'false');
-          b.parentElement.querySelector('.faq-a').style.maxHeight = '0';
-          b.parentElement.querySelector('.faq-a').style.opacity = '0';
-        });
-        // Open this one if it was closed
-        if (!isOpen) {
-          btn.setAttribute('aria-expanded', 'true');
-          answer.style.maxHeight = answer.scrollHeight + 'px';
-          answer.style.opacity = '1';
-        }
+    function toggleFaq(btn) {
+      var answer = btn.nextElementSibling;
+      var isOpen = btn.getAttribute('aria-expanded') === 'true';
+      // Close all
+      document.querySelectorAll('.faq-btn').forEach(function(b) {
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.style.maxHeight = '0';
+        b.nextElementSibling.style.paddingBottom = '0';
       });
-    });
+      // Open clicked if it was closed
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 32 + 'px';
+        answer.style.paddingBottom = '20px';
+      }
+    }
   </script>
 
 </body>

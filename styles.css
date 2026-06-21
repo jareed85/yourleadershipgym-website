@@ -929,85 +929,50 @@ body:not(.homepage) header {
   /* placeholder — other pages use their own layout */
 }
 
-/* ---------- FAQ Section ---------- */
-.faq-section {
-  padding: 80px 0;
-  text-align: center;
+/* ---------- FAQ ---------- */
+.faq-row {
+  border-bottom: 1px solid #27272a;
 }
 
-.faq-section .section-label {
-  display: block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--indigo-400);
-  margin-bottom: 16px;
-}
-
-.faq-section .section-title {
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-  font-weight: 800;
-  color: var(--text-primary);
-  margin: 0 0 3rem;
-  line-height: 1.2;
-}
-
-.faq-list {
-  max-width: 640px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.faq-item {
-  border-bottom: 1px solid var(--border);
-}
-.faq-item:last-child { border-bottom: none; }
-
-/* Accordion button */
-.faq-q {
+.faq-btn {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 16px;
   background: none;
   border: none;
-  padding: 1.25rem 0;
+  padding: 20px 0;
   cursor: pointer;
   text-align: left;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: #f4f4f5;
   font-family: inherit;
   letter-spacing: -0.01em;
-  transition: color 0.2s ease;
+  transition: color 0.2s;
 }
-.faq-q:hover { color: var(--indigo-400); }
+.faq-btn:hover { color: #818cf8; }
+.faq-btn[aria-expanded="true"] { color: #818cf8; }
 
-.faq-chevron {
-  font-size: 1.4rem;
-  line-height: 1;
-  color: var(--text-500);
-  transition: transform 0.25s ease, color 0.2s ease;
+.faq-icon {
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
+  color: #52525b;
+  transition: transform 0.25s ease, color 0.2s;
 }
-.faq-q[aria-expanded="true"] .faq-chevron {
+.faq-btn[aria-expanded="true"] .faq-icon {
   transform: rotate(180deg);
-  color: var(--indigo-400);
+  color: #818cf8;
 }
 
-/* Answer panel */
-.faq-a {
+.faq-answer {
   max-height: 0;
-  opacity: 0;
   overflow: hidden;
   font-size: 0.925rem;
-  color: var(--text-secondary);
+  color: #a1a1aa;
   line-height: 1.8;
-  padding: 0;
-  transition: max-height 0.3s ease, opacity 0.25s ease;
-}
-.faq-q[aria-expanded="true"] + .faq-a {
-  padding-bottom: 1.25rem;
+  padding-bottom: 0;
+  transition: max-height 0.3s ease, padding-bottom 0.3s ease;
 }

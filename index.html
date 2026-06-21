@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Global site tag (gtag.js) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-M1FCWDQXVH"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -49,83 +49,492 @@
 </head>
 
 <body class="homepage">
-  <header>
-    <img class="logo" src="https://yourleadershipgym.com/LG_logo_fullcolor_export.png" alt="Leadership Gym Logo" />
-    <nav>
-      <a href="/" class="active">Home</a>
-      <a href="/about">About</a>
-      <a href="/how-it-started">Our Story</a>
-      <a href="/faq">FAQ</a>
-      <a href="/pricing">Pricing</a>
-    </nav>
-  </header>
 
-  <main class="splash">
-    <h1>Leadership Gym</h1>
-    <p>
-      <strong>Build leadership habits that stick — one daily rep at a time.</strong><br /><br />
-      Get a real leadership prompt every day, receive instant AI feedback on your response, and track your growth across the 4 pillars that matter: <strong>Clarity, Strategy, Empathy, and Self-Awareness.</strong><br /><br />
-      Join leaders who are putting in the work. Step into the gym.
-    </p>
-    <p class="social-proof">🔥 Join 39 leaders growing their leadership every day</p>
-    <a class="button" href="https://leadershipgymhq.com" target="_blank">
-      Start Your Free Trial
-    </a>
-    <p class="micro">No credit card required · 7-day free trial · Cancel anytime</p>
-  </main>
+  <!-- ================================================
+       NAV
+       ================================================ -->
+  <nav class="site-nav" id="site-nav">
+    <div class="container nav-inner">
+      <a href="/" aria-label="Leadership Gym home">
+        <img
+          class="nav-logo"
+          src="https://yourleadershipgym.com/LG_logo_fullcolor_export.png"
+          alt="Leadership Gym"
+        />
+      </a>
 
-  <section class="testimonials">
-    <h2>What Leaders Are Saying</h2>
-    <div class="testimonial-grid">
-      <div class="testimonial">
-        <div class="testimonial-stars">★★★★★</div>
-        <p>"I've tried other leadership courses, but this daily practice format is what actually moves the needle. The AI feedback is surprisingly insightful."</p>
-        <div class="author">Sarah M.</div>
-        <div class="author-title">Engineering Manager</div>
+      <ul class="nav-links">
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="/faq">FAQ</a></li>
+      </ul>
+
+      <a
+        href="https://leadershipgymhq.com"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-primary btn-sm nav-cta"
+      >Get Started Free</a>
+
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ================================================
+       HERO
+       ================================================ -->
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+
+      <!-- Left: copy -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Free to start — no credit card required
+        </div>
+
+        <h1>Train Your Leadership.<br>Every Single Day.</h1>
+
+        <p class="hero-sub">
+          Get a real workplace scenario each day. Write your response.
+          Receive instant AI scores across four leadership dimensions —
+          completely free, forever.
+        </p>
+
+        <div class="hero-ctas">
+          <a
+            href="https://leadershipgymhq.com"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-primary"
+          >Start Free — No Credit Card</a>
+          <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
+        </div>
+
+        <div class="trust-bar">
+          <span>Free forever</span>
+          <span>No credit card</span>
+          <span>365 unique scenarios</span>
+        </div>
       </div>
-      <div class="testimonial">
-        <div class="testimonial-stars">★★★★★</div>
-        <p>"Five minutes a day, and I can already see patterns in my leadership style I never noticed before. Game changer."</p>
-        <div class="author">James T.</div>
-        <div class="author-title">Startup Founder</div>
+
+      <!-- Right: mock app preview -->
+      <div class="hero-preview">
+        <div class="preview-card">
+          <div class="preview-header">
+            <span class="preview-dot red"></span>
+            <span class="preview-dot yellow"></span>
+            <span class="preview-dot green"></span>
+            <span class="preview-label">Today's Prompt</span>
+          </div>
+
+          <div class="preview-day">Day 47 of 365</div>
+
+          <div class="preview-prompt-title">
+            The Underperforming Star
+          </div>
+
+          <p class="preview-prompt-body">
+            Your highest-performer has been missing deadlines for three weeks.
+            The team is noticing. They haven't said anything to you yet.
+            How do you handle this?
+          </p>
+
+          <div class="preview-response">
+            I'd request a private 1:1 to check in — not to confront, but to understand what's shifted. High performers don't slip without reason...
+          </div>
+
+          <div class="preview-scores">
+            <div class="score-chip">
+              <span class="score-chip-label">Clarity</span>
+              <div class="score-chip-bar">
+                <div class="score-bar-track">
+                  <div class="score-bar-fill" style="width:82%"></div>
+                </div>
+              </div>
+              <span class="score-chip-value">82</span>
+            </div>
+            <div class="score-chip">
+              <span class="score-chip-label">Strategy</span>
+              <div class="score-chip-bar">
+                <div class="score-bar-track">
+                  <div class="score-bar-fill" style="width:74%"></div>
+                </div>
+              </div>
+              <span class="score-chip-value">74</span>
+            </div>
+            <div class="score-chip">
+              <span class="score-chip-label">Empathy</span>
+              <div class="score-chip-bar">
+                <div class="score-bar-track">
+                  <div class="score-bar-fill" style="width:91%"></div>
+                </div>
+              </div>
+              <span class="score-chip-value">91</span>
+            </div>
+            <div class="score-chip">
+              <span class="score-chip-label">Self-Aware</span>
+              <div class="score-chip-bar">
+                <div class="score-bar-track">
+                  <div class="score-bar-fill" style="width:67%"></div>
+                </div>
+              </div>
+              <span class="score-chip-value">67</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="testimonial">
-        <div class="testimonial-stars">★★★★★</div>
-        <p>"The weekly recaps keep me accountable. It's like having a leadership coach in my pocket."</p>
-        <div class="author">Maria L.</div>
-        <div class="author-title">Director of Operations</div>
+
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ================================================
+       HOW IT WORKS
+       ================================================ -->
+  <section class="section" id="how-it-works">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">The daily loop</span>
+        <h2>Simple. Consistent. Effective.</h2>
+        <p>Three steps. Five minutes. Real growth over time.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card fade-in fade-in-delay-1">
+          <div class="step-number">
+            <span class="step-icon">📋</span>
+          </div>
+          <div>
+            <h3>Get Today's Scenario</h3>
+            <p>A fresh, real-world leadership challenge arrives every day — the kind of situation you actually face as a manager, founder, or team lead.</p>
+          </div>
+        </div>
+
+        <div class="step-card fade-in fade-in-delay-2">
+          <div class="step-number">
+            <span class="step-icon">✍️</span>
+          </div>
+          <div>
+            <h3>Write Your Response</h3>
+            <p>Think it through and write how you'd handle it. There's no single right answer — the exercise is in the thinking.</p>
+          </div>
+        </div>
+
+        <div class="step-card fade-in fade-in-delay-3">
+          <div class="step-number">
+            <span class="step-icon">📊</span>
+          </div>
+          <div>
+            <h3>See Your Scores Instantly</h3>
+            <p>AI scores your response across Clarity, Strategy, Empathy, and Self-Awareness — 0 to 100, instantly. Watch your numbers climb over time.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="features">
-    <h2>How It Works</h2>
-    <div class="feature-grid">
-      <div class="feature">
-        <div class="feature-icon">📝</div>
-        <h3>Daily Prompt</h3>
-        <p>Get a real leadership challenge every morning. Think through it, write your response.</p>
+  <hr class="divider">
+
+  <!-- ================================================
+       PRICING / WHAT YOU GET
+       ================================================ -->
+  <section class="section section-dark" id="pricing">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Pricing</span>
+        <h2>Start Free. Go Deeper When You're Ready.</h2>
+        <p>The core experience — daily prompts, instant scores, history — is free forever. Upgrade for full AI coaching.</p>
       </div>
-      <div class="feature">
-        <div class="feature-icon">🤖</div>
-        <h3>AI Feedback</h3>
-        <p>Instant scores on Clarity, Strategy, Empathy, and Self-Awareness with actionable feedback.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">📊</div>
-        <h3>Track Progress</h3>
-        <p>See your trends over time. Know exactly where you're growing and where to focus.</p>
+
+      <div class="pricing-grid">
+
+        <!-- Free plan -->
+        <div class="plan-card fade-in fade-in-delay-1">
+          <div class="plan-header">
+            <div class="plan-name">Free</div>
+            <div class="plan-price">$0 <span>/ forever</span></div>
+            <p class="plan-tagline">Everything you need to build the habit.</p>
+          </div>
+
+          <ul class="plan-features">
+            <li>
+              <span class="feat-icon">✅</span>
+              Daily leadership scenario
+            </li>
+            <li>
+              <span class="feat-icon">✅</span>
+              Submit your response
+            </li>
+            <li>
+              <span class="feat-icon">✅</span>
+              Instant score — 4 dimensions
+            </li>
+            <li>
+              <span class="feat-icon">✅</span>
+              History &amp; trends
+            </li>
+            <li class="feat-locked">
+              <span class="feat-icon">🔒</span>
+              AI coaching feedback
+            </li>
+            <li class="feat-locked">
+              <span class="feat-icon">🔒</span>
+              Focus area recommendation
+            </li>
+          </ul>
+
+          <div class="plan-cta">
+            <a
+              href="https://leadershipgymhq.com"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-secondary"
+            >Start Free — No Credit Card</a>
+          </div>
+        </div>
+
+        <!-- Paid plan -->
+        <div class="plan-card paid fade-in fade-in-delay-2">
+          <div class="plan-header">
+            <div class="plan-name">Pro</div>
+            <div class="plan-price">$2.99 <span>/ mo</span></div>
+            <p class="plan-tagline">Full AI coaching after every session.</p>
+          </div>
+
+          <ul class="plan-features">
+            <li>
+              <span class="feat-icon">✅</span>
+              Daily leadership scenario
+            </li>
+            <li>
+              <span class="feat-icon">✅</span>
+              Submit your response
+            </li>
+            <li>
+              <span class="feat-icon">✅</span>
+              Instant score — 4 dimensions
+            </li>
+            <li>
+              <span class="feat-icon">✅</span>
+              History &amp; trends
+            </li>
+            <li>
+              <span class="feat-icon">✅</span>
+              AI coaching feedback
+            </li>
+            <li>
+              <span class="feat-icon">✅</span>
+              Focus area recommendation
+            </li>
+          </ul>
+
+          <div class="plan-cta">
+            <a
+              href="https://leadershipgymhq.com"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-primary"
+            >Get Pro</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <footer>
-    <nav class="footer-nav">
-      <a href="/privacy">Privacy Policy</a>
-      <span>•</span>
-      <a href="/terms">Terms of Service</a>
-    </nav>
-    <p>&copy; 2025 Leadership Gym</p>
+  <hr class="divider">
+
+  <!-- ================================================
+       4 PILLARS
+       ================================================ -->
+  <section class="section" id="pillars">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">The four dimensions</span>
+        <h2>What Gets Measured Gets Better.</h2>
+        <p>Every response is scored across four pillars of leadership excellence.</p>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-card fade-in fade-in-delay-1">
+          <div class="pillar-icon">🎯</div>
+          <h3>Clarity</h3>
+          <p>Are you communicating clearly and decisively? Leaders who cut through noise build trust fast.</p>
+        </div>
+
+        <div class="pillar-card fade-in fade-in-delay-2">
+          <div class="pillar-icon">♟️</div>
+          <h3>Strategic Insight</h3>
+          <p>Are you thinking beyond the immediate situation? Great leaders see around corners.</p>
+        </div>
+
+        <div class="pillar-card fade-in fade-in-delay-3">
+          <div class="pillar-icon">🤝</div>
+          <h3>Empathy</h3>
+          <p>Are you considering the human side? The best decisions account for the people affected by them.</p>
+        </div>
+
+        <div class="pillar-card fade-in">
+          <div class="pillar-icon">🪞</div>
+          <h3>Self-Awareness</h3>
+          <p>Are you reflecting on your own role and blind spots? Self-awareness separates good leaders from great ones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ================================================
+       TESTIMONIALS
+       ================================================ -->
+  <section class="section section-dark" id="testimonials">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">What leaders are saying</span>
+        <h2>Built for People Who Show Up.</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in fade-in-delay-1">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">
+            I've tried other leadership courses, but this daily practice format is what actually moves the needle. The AI feedback is surprisingly insightful.
+          </p>
+          <div class="testimonial-author">
+            <span class="author-name">Sarah M.</span>
+            <span class="author-title">Engineering Manager</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in fade-in-delay-2">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">
+            Five minutes a day, and I can already see patterns in my leadership style I never noticed before. Game changer.
+          </p>
+          <div class="testimonial-author">
+            <span class="author-name">James T.</span>
+            <span class="author-title">Startup Founder</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in fade-in-delay-3">
+          <div class="testimonial-stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-quote">
+            The weekly recaps keep me accountable. It's like having a leadership coach in my pocket.
+          </p>
+          <div class="testimonial-author">
+            <span class="author-name">Maria L.</span>
+            <span class="author-title">Director of Operations</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ================================================
+       FINAL CTA
+       ================================================ -->
+  <section class="final-cta" id="get-started">
+    <div class="container final-cta-inner fade-in">
+      <span class="section-label">Ready?</span>
+      <h2>Show Up. Every Single Day.</h2>
+      <p>
+        Join leaders who are building the habit. It's free to start —
+        no credit card, no catch.
+      </p>
+
+      <div>
+        <a
+          href="https://leadershipgymhq.com"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-primary"
+        >Start Free — No Credit Card</a>
+      </div>
+
+      <div class="trust-bar" style="justify-content: center; margin-top: 20px;">
+        <span>Free forever</span>
+        <span>No credit card</span>
+        <span>365 unique scenarios</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       FOOTER
+       ================================================ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-links">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 Leadership Gym</p>
+    </div>
   </footer>
+
+  <!-- ================================================
+       JS: Mobile nav toggle + fade-in observer
+       ================================================ -->
+  <script>
+    // --- Mobile nav toggle ---
+    const navToggle = document.getElementById('nav-toggle');
+    const siteNav   = document.getElementById('site-nav');
+
+    navToggle.addEventListener('click', function () {
+      const isOpen = siteNav.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    // Close mobile nav on link click
+    siteNav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        siteNav.classList.remove('nav-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // --- Fade-in on scroll ---
+    (function() {
+      var elements = document.querySelectorAll('.fade-in');
+      if (!elements.length) return;
+
+      // Mark elements for animation (visible by default without JS)
+      elements.forEach(function(el) { el.classList.add('will-animate'); });
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      elements.forEach(function(el) { observer.observe(el); });
+    })();
+  </script>
+
 </body>
 </html>

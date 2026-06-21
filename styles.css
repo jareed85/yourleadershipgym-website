@@ -960,7 +960,7 @@ body:not(.homepage) header {
   height: 22px;
   min-width: 22px;
   flex-shrink: 0;
-  color: #71717a;
+  color: #a1a1aa;
   transition: transform 0.25s ease, color 0.2s;
 }
 .faq-btn[aria-expanded="true"] .faq-icon {

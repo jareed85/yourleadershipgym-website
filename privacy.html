@@ -38,6 +38,8 @@
   <meta name="twitter:description" content="Learn how Leadership Gym collects, uses, and protects your personal information." />
   <meta name="twitter:image"       content="https://yourleadershipgym.com/LG_logo_192.png" />
 
+  <link rel="stylesheet" href="styles.css">
+
   <!-- Organization JSON-LD -->
   <script type="application/ld+json">
   {
@@ -176,18 +178,40 @@
 <body>
 
   <!-- ── Nav ── -->
-  <nav style="position:sticky;top:0;z-index:100;background:rgba(9,9,11,0.85);backdrop-filter:blur(16px);border-bottom:1px solid #27272a;">
-    <div style="max-width:1120px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
-      <a href="/" style="display:flex;align-items:center;text-decoration:none;flex-shrink:0;">
-        <img src="https://yourleadershipgym.com/LG_logo_fullcolor_export.png" alt="Leadership Gym" style="height:60px;width:auto;">
+  <nav class="site-nav" id="site-nav">
+    <div class="container nav-inner">
+      <a href="/" aria-label="Leadership Gym home">
+        <img
+          class="nav-logo"
+          src="https://yourleadershipgym.com/LG_logo_fullcolor_export.png"
+          alt="Leadership Gym"
+        />
       </a>
-      <div style="display:flex;align-items:center;gap:28px;">
-        <a href="/" style="color:#a1a1aa;text-decoration:none;font-size:0.9rem;font-weight:500;">Home</a>
-        <a href="/#how-it-works" style="color:#a1a1aa;text-decoration:none;font-size:0.9rem;font-weight:500;">How It Works</a>
-        <a href="/#pricing" style="color:#a1a1aa;text-decoration:none;font-size:0.9rem;font-weight:500;">Pricing</a>
-        <a href="/#faq" style="color:#a1a1aa;text-decoration:none;font-size:0.9rem;font-weight:500;">FAQ</a>
-      </div>
-      <a href="https://leadershipgymhq.com" target="_blank" rel="noopener" style="background:#6366f1;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:0.875rem;font-weight:600;white-space:nowrap;">Get Started Free</a>
+
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/#how-it-works">How It Works</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+      </ul>
+
+      <a
+        href="https://leadershipgymhq.com"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-primary btn-sm nav-cta"
+      >Get Started Free</a>
+
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
 
@@ -243,5 +267,21 @@
     </p>
   </footer>
 
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const siteNav = document.getElementById('site-nav');
+
+    navToggle.addEventListener('click', function () {
+      const isOpen = siteNav.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    siteNav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        siteNav.classList.remove('nav-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
 </body>
 </html>
